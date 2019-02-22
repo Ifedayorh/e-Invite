@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { ListItem, ListItemIcon, ListItemText } from '@material-ui/core//List'
+import { ListItem, ListItemIcon, ListItemText } from '@material-ui/core/List'
 
 const DrawerLink = props =>
   <ListItem button component={Link} to={props.to}>

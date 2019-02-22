@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { withStyles } from '@material-ui/core//styles'
+import { withStyles } from '@material-ui/core/styles'
 // For future reference
 // import { Link } from 'react-router-dom'
 // import classNames from 'classnames'
-// import BorderVertical from '@@material-ui/core//icons/BorderVertical'
-// import Search from '@@material-ui/core//icons/Search'
-// import Button from '@material-ui/core//Button'
+// import BorderVertical from '@@material-ui/core/icons/BorderVertical'
+// import Search from '@@material-ui/core/icons/Search'
+// import Button from '@material-ui/core/Button'
 import CreateEvent from './CreateEvent'
-import orange from '@material-ui/core//colors/orange'
+import orange from '@material-ui/core/colors/orange'
 
 const styles = theme => ({
   leftIcon: {
