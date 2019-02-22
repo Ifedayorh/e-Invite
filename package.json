@@ -7,10 +7,10 @@
     "server": "node server.js",
     "client": "cd client && npm install && npm run start",
     "start": "concurrently \"node server.js\" \"npm run client\"",
-    "build": "cd client && npm run build",
+    "build": "cd client && npm install && npm run build",
     "deploy": "yarn build && git add . && git commit -m \"Building for production\" && git push heroku master",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "npm start"
+    "heroku-postbuild": "npm build"
   },
   "author": "",
   "license": "ISC",
