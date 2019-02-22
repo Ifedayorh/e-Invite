@@ -1,0 +1,32 @@
+{
+  "name": "evitehub",
+  "version": "1.0.0",
+  "description": "Events planner",
+  "main": "server.js",
+  "scripts": {
+    "server": "node server.js",
+    "client": "cd client && npm run start",
+    "start": "concurrently \"node server.js\" \"npm run client\"",
+    "build": "cd client && npm run build",
+    "deploy": "yarn build && git add . && git commit -m \"Building for production\" && git push heroku master",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "babel-eslint": "^8.0.2",
+    "body-parser": "^1.18.2",
+    "dotenv": "^4.0.0",
+    "envs": "^0.1.6",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.1",
+    "mongoose-unique-validator": "^1.0.6",
+    "nodemailer": "^4.4.0",
+    "path": "^0.12.7"
+  }
+}
