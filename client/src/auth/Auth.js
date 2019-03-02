@@ -3,15 +3,14 @@ import auth0 from 'auth0-js'
 
 export default class Auth {
   auth0 = new auth0.WebAuth({
-    domain: process.env.REACT_APP_AUTH0_DOMAIN || 'evite.auth0.com',
-    clientID: process.env.REACT_APP_AUTH0_CLIENTID || 'Uh4d6Zzdh_hbxvwqNlPfAkdTXcQ2QanU',
-    redirectUri: process.env.REACT_APP_AUTH0_REDIRECTURI || 'http://localhost:3000/callback',
-    audience: `https://${process.env.REACT_APP_AUTH0_DOMAIN}/userinfo`,
+    domain: process.env.REACT_APP_AUTH0_DOMAIN || 'e-invite.auth0.com',
+    clientID: process.env.REACT_APP_AUTH0_CLIENTID || 'qno4Yw0uLfwuYuwUkTVtQyq-oHMhjCvZ',
     responseType: 'token id_token',
     scope: 'openid profile email'
   })
 
   userProfile
+  
 
   constructor () {
     this.login = this.login.bind(this)
@@ -22,8 +21,11 @@ export default class Auth {
   }
 
   login () {
-    this.auth0.authorize()
-  }
+    this.auth0.authorize(
+      {
+        redirect_uri: "http://localhost:3000/callback" 
+      })
+      }
 
   setSession (authResult) {
     // Set the time that the access token will expire at
@@ -31,8 +33,8 @@ export default class Auth {
     localStorage.setItem('access_token', authResult.accessToken)
     localStorage.setItem('id_token', authResult.idToken)
     localStorage.setItem('expires_at', expiresAt)
-    // navigate to the dashboard route
-    history.replace('/dashboard')
+    // // navigate to the dashboard route
+    // history.replace('/dashboard')
   }
 
   getAccessToken () {
@@ -46,6 +48,7 @@ export default class Auth {
   setProfile (accessToken) {
     this.auth0.client.userInfo(accessToken, (err, profile) => {
       if (profile) {
+        console.log(profile)
         window.localStorage.setItem('profile', JSON.stringify(profile))
       }
     })

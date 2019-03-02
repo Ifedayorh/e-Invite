@@ -1,11 +1,10 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const routes = require('./routes')
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 8000
 const app = express()
 const mongoose = require('mongoose')
-require('dotenv').config({path: '.env.development.local'})
-
+require('dotenv').config()
 
 // Configure body parser for AJAX requests
 app.use(bodyParser.urlencoded({ extended: true }))
