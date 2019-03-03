@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { withStyles } from '@material-ui/core/styles'
+import { withStyles } from '@material-ui/core'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Hidden from '@material-ui/core/Hidden'
@@ -47,7 +47,7 @@ const NavBarView = ({ authService, auth, loginRequest, logoutSuccess, onToggleSi
     ? <AppBar className={classes.appBar}>
       <Toolbar disableGutters className={classes.navSpace}>
         <IconButton
-          color='contrast'
+          color='secondary'
           aria-label='open drawer'
           onClick={() => {
             onToggleSidebar()

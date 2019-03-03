@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Typography from '@material-ui/core/Typography'
 import PropTypes from 'prop-types'
-import { withStyles } from '@material-ui/core/styles'
+import { withStyles } from '@material-ui/core'
 import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
 import Divider from '@material-ui/core/Divider'
@@ -12,10 +12,9 @@ import JSPDF from 'jspdf'
 import { TimePicker, DatePicker } from 'material-ui-pickers'
 import moment from 'moment'
 import MenuItem from '@material-ui/core/MenuItem'
-import ExpansionPanel, {
-  ExpansionPanelDetails,
-  ExpansionPanelSummary
-} from '@material-ui/core/ExpansionPanel'
+import ExpansionPanel from '@material-ui/core/ExpansionPanel'
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import PageHeader from '../../components/PageHeader'
 import Card01 from '../../components/invitationCard/Card01'
@@ -342,7 +341,7 @@ class Invitation extends Component {
           <Grid item xs={12} sm={12} md={8}>
             {this.Card()}
             <center>
-              <Button raised color='primary' className={classes.button}
+              <Button variant='contained' color='primary' className={classes.button}
                 onClick={this.handleSave}>
                 <SaveIcon className={classes.leftIcon} />
                 SAVE TO FILE

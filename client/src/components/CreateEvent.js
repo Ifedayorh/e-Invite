@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
-import { withStyles } from '@material-ui/core/styles'
+import { withStyles } from '@material-ui/core'
 import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
 import { TimePicker, DatePicker } from 'material-ui-pickers'
@@ -9,12 +9,12 @@ import Button from '@material-ui/core/Button'
 import API from '../utils/Api'
 import classNames from 'classnames'
 import orange from '@material-ui/core/colors/orange'
-import Dialog, {
-  DialogActions,
-  DialogContent,
-  DialogTitle,
-  DialogContentText
-} from '@material-ui/core/Dialog'
+import Dialog from '@material-ui/core/Dialog'
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import DialogContentText from '@material-ui/core/DialogContentText';
+
 import Slide from '@material-ui/core/Slide'
 import PagesIcon from '@material-ui/icons/Pages'
 import * as actionTypes from '../store/actions/'
@@ -179,11 +179,11 @@ class addEvent extends React.Component {
     return (
 
       <span>
-        <Button onClick={this.handleClickOpen} className={classNames(classes.button, classes.raisedAccent)} raised color='accent'>
+        <Button onClick={this.handleClickOpen} className={classNames(classes.button, classes.raisedAccent)} variant='contained' color='primary'>
           <PagesIcon className={classes.leftIcon} />
           New Event
         </Button>
-        <Dialog open={this.state.open} onRequestClose={this.handleRequestClose} transition={Transition}>
+        <Dialog open={this.state.open} onClose={this.handleRequestClose} transition={Transition}>
           <DialogTitle>New Event</DialogTitle>
           <DialogContent>
             <DialogContentText className={classes.spaceBottom}>

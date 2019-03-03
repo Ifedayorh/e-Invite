@@ -1,7 +1,7 @@
 import React from 'react'
 import { Redirect, Route, Switch } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import { MuiThemeProvider, createMuiTheme, withStyles } from '@material-ui/core/styles'
+import { MuiThemeProvider, createMuiTheme, withStyles } from '@material-ui/core'
 import teal from '@material-ui/core/colors/teal'
 
 import NavBar from '../NavBar/NavBar'

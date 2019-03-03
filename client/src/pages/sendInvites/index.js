@@ -1,1 +1,3 @@
-export { default } from './SendInvites'
+import SendInvites from './SendInvites';
+
+export default SendInvites; 

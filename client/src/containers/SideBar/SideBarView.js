@@ -1,5 +1,5 @@
 import React from 'react'
-import { MuiThemeProvider, createMuiTheme, withStyles } from '@material-ui/core/styles'
+import { MuiThemeProvider, createMuiTheme, withStyles } from '@material-ui/core'
 import teal from '@material-ui/core/colors/teal'
 import orange from '@material-ui/core/colors/orange'
 import PropTypes from 'prop-types'
@@ -75,7 +75,7 @@ const SideBarView = ({ auth, onToggleSidebar, mobile, classes }) => (
               paper: classes.drawerPaper,
               paperAnchorDockedLeft: classes.noBorderRight
             }}
-            onRequestClose={() => {
+            onClose={() => {
               onToggleSidebar()
             }}
             ModalProps={{

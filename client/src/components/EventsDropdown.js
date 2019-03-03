@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { withStyles } from '@material-ui/core/styles'
+import { withStyles } from '@material-ui/core'
 import teal from '@material-ui/core/colors/teal'
-import List, { ListItem, ListItemIcon, ListItemText } from '@material-ui/core/List'
-import Menu, { MenuItem } from '@material-ui/core/Menu'
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import Menu from '@material-ui/core/Menu'
+import MenuItem from '@material-ui/core/MenuItem';
 import TodayIcon from '@material-ui/icons/Today'
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown'
 import Divider from '@material-ui/core/Divider'
@@ -79,7 +83,7 @@ class EventsDropdown extends Component {
           id='lock-menu'
           anchorEl={this.state.anchorEl}
           open={this.state.open}
-          onRequestClose={this.handleRequestClose} >
+          onClose={this.handleRequestClose} >
           {events.map((option, index) => (
             <MenuItem
               key={option.eventName}

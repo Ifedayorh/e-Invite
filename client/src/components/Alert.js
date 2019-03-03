@@ -1,7 +1,7 @@
 import React from 'react'
-import { withStyles } from '@material-ui/core/styles'
+import { withStyles } from '@material-ui/core'
 import PropTypes from 'prop-types'
-import Snackbar from '@material-ui/core/Snackbar'
+import Snackbar from '@material-ui/core/Snackbar';
 
 const styles = theme => ({
   alerts: {
@@ -13,11 +13,11 @@ function Alert (props) {
   const { classes } = props
   return (
     <Snackbar
-      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+      anchorOriginTopRight
       open={props.open}
-      onRequestClose={props.onRequestClose}
-      autoHideDuration='3000'
-      classes={{anchorTopRight: classes.alerts}}
+      onClose={props.onClose}
+      autoHideDuration={3000}
+      classes={{anchorOriginTopRight: classes.alerts}}
       SnackbarContentProps={{
         'aria-describedby': 'message-id2'
       }}

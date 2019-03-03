@@ -7,7 +7,8 @@ import App from './containers/App/App'
 import registerServiceWorker from './registerServiceWorker'
 import history from './history'
 import Home from './pages/home'
-
+import MomentUtils from '@date-io/moment';
+import { MuiPickersUtilsProvider } from 'material-ui-pickers';
 import { createStore, applyMiddleware, compose } from 'redux'
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
@@ -20,9 +21,12 @@ const store = createStore(
   composeEnhancers(applyMiddleware(thunk))
 )
 
-ReactDOM.render(<Provider store={store}>
+ReactDOM.render(
+<Provider store={store}>
   <Router history={history} component={Home}>
+  <MuiPickersUtilsProvider utils={MomentUtils}>
     <App />
+    </MuiPickersUtilsProvider>
   </Router>
 </Provider>,
 document.getElementById('root'))
