@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { withStyles } from '@material-ui/core/styles'
-import Card, { CardActions, CardContent } from '@material-ui/core/Card'
+import { withStyles } from '@material-ui/core'
+import Card from '@material-ui/core/Card'
+import CardActions from '@material-ui/core/CardActions'
+import CardContent from '@material-ui/core/CardContent'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
@@ -223,21 +225,21 @@ class Rsvp extends React.Component {
             </CardContent>
             <CardActions>
               {auth.isAuthenticated
-              ? <Button raised color='primary' disabled className={classes.button} onClick={this.onSubmit}>
+              ? <Button variant='contained' color='primary' disabled className={classes.button} onClick={this.onSubmit}>
               Submit
               </Button>
-              : <Button raised color='primary' className={classes.button} onClick={this.onSubmit}>
+              : <Button variant='contained' color='primary' className={classes.button} onClick={this.onSubmit}>
               Submit
             </Button>
             }
               <Alert
                 open={this.state.open}
-                onRequestClose={this.handleRequestClose}
+                onClose={this.handleRequestClose}
                 message='Thank you for RSVP!'
               />
               <Alert
                 open={this.state.error}
-                onRequestClose={this.handleRequestClose}
+                onClose={this.handleRequestClose}
                 message='Error, you did not provide a response.'
               />
             </CardActions>

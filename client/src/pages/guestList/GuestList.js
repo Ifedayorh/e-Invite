@@ -4,15 +4,24 @@ import API from '../../utils/Api'
 
 import Switch from '@material-ui/core/Switch'
 import IconButton from '@material-ui/core/IconButton'
-import Table, { TableBody, TableCell, TableHead, TableRow } from '@material-ui/core/Table'
+import Table from '@material-ui/core/Table'
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
 import EditIcon from '@material-ui/icons/Edit'
 import DeleteIcon from '@material-ui/icons/Delete'
 import PersonAddIcon from '@material-ui/icons/PersonAdd'
 import TextField from '@material-ui/core/TextField'
-import Dialog, { DialogActions, DialogContent, DialogContentText, DialogTitle } from '@material-ui/core/Dialog'
+import Dialog from '@material-ui/core/Dialog'
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+
 import Button from '@material-ui/core/Button'
 import Tooltip from '@material-ui/core/Tooltip'
-import { withStyles } from '@material-ui/core/styles'
+import { withStyles } from '@material-ui/core'
 import Paper from '@material-ui/core/Paper'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import FormGroup from '@material-ui/core/FormGroup'
@@ -179,7 +188,7 @@ class GuestList extends Component {
     return (
       <div className={classes.root}>
         <PageHeader title='Guest List' body='Manage your Guest List!' />
-        <Button raised color='primary'
+        <Button variant='contained' color='primary'
           onClick={this.newDialogOpen}>
           <PersonAddIcon className={classes.leftIcon} />
               Add a Guest
@@ -246,7 +255,7 @@ class GuestList extends Component {
           </Table>
         </Paper>
 
-        <Dialog open={this.state.newDialog} onRequestClose={this.newDialogClose} transition={Transition}>
+        <Dialog open={this.state.newDialog} onClose={this.newDialogClose} transition={Transition}>
           <DialogTitle>New Guest</DialogTitle>
           <DialogContent>
             <DialogContentText className={classes.spaceBottom}>
@@ -295,7 +304,7 @@ class GuestList extends Component {
           </DialogActions>
         </Dialog>
 
-        <Dialog open={this.state.editDialog} onRequestClose={this.editDialogClose} transition={Transition}>
+        <Dialog open={this.state.editDialog} onClose={this.editDialogClose} transition={Transition}>
           <DialogTitle>Edit Guest</DialogTitle>
           <DialogContent>
             <DialogContentText className={classes.spaceBottom}>

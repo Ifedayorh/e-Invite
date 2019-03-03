@@ -1,12 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { withStyles } from '@material-ui/core/styles'
-import List, { ListItem, ListItemSecondaryAction, ListItemText } from '@material-ui/core/List'
+import { withStyles } from '@material-ui/core'
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
+import ListItemText from '@material-ui/core/ListItemText';
 import Checkbox from '@material-ui/core/Checkbox'
 import TextField from '@material-ui/core/TextField'
-import Dialog, { DialogActions, DialogContent, DialogTitle} from '@material-ui/core/Dialog'
+import  DialogContent from '@material-ui/core/DialogContent'
+import  DialogActions from '@material-ui/core/DialogActions'
+import DialogTitle from '@material-ui/core/DialogTitle';
+import Dialog from '@material-ui/core/Dialog';
 import Button from '@material-ui/core/Button'
-import Tabs, { Tab } from '@material-ui/core/Tabs'
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
 import {PlaylistAddCheck, PlaylistAdd, Delete} from '@material-ui/icons'
 import ListIcon from '@material-ui/icons/List'
 import AppBar from '@material-ui/core/AppBar'
@@ -190,7 +197,7 @@ class TodoList extends React.Component {
           <Tabs
             value={value}
             onChange={this.handleChange}
-            fullWidth
+            variant='fullWidth'
             indicatorColor='primary'
             textColor='primary'
           >
@@ -262,9 +269,9 @@ class TodoList extends React.Component {
           </TabContainer>
         }
 
-        <Button onClick={this.openModal} color='primary' raised>Add To Do <PlaylistAdd className={classes.rightIcon} /></Button>
+        <Button onClick={this.openModal} color='primary' variant='contained'>Add To Do <PlaylistAdd className={classes.rightIcon} /></Button>
 
-        <Dialog open={this.state.modal} onRequestClose={this.closeModal}>
+        <Dialog open={this.state.modal} onClose={this.closeModal}>
           <DialogTitle>Add To Do</DialogTitle>
           <DialogContent>
             <TextField
@@ -286,7 +293,7 @@ class TodoList extends React.Component {
 
         <Alert
           open={this.state.snack}
-          onRequestClose={this.closeSnack}
+          onClose={this.closeSnack}
           message={this.state.snackMessage}
         />
 

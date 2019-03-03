@@ -1,1 +1,3 @@
-export { default } from './Rsvp'
+import Rsvp from './Rsvp'
+
+export default Rsvp;

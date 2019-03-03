@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import { withStyles, MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
+import { withStyles, MuiThemeProvider, createMuiTheme } from '@material-ui/core'
 import Typography from '@material-ui/core/Typography'
 import Toolbar from '@material-ui/core/Toolbar'
 import ButtonBase from '@material-ui/core/ButtonBase'

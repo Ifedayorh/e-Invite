@@ -1,1 +1,3 @@
-export { default } from './viewEvents'
+import viewEvents from './viewEvents'
+
+export default viewEvents;

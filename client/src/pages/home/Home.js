@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Button from '@material-ui/core/Button'
-import { withStyles } from '@material-ui/core/styles'
+import { withStyles } from '@material-ui/core'
 import orange from '@material-ui/core/colors/orange'
 import classNames from 'classnames'
 import Grid from '@material-ui/core/Grid'
@@ -87,7 +87,7 @@ class Home extends Component {
               <h1 className='featured-title'>Take the Hassle out of Event Planning</h1>
               <p>Plan your next Event with us by using our easy to use Event Planner. Event Planning has never been easier.</p>
               <div>
-                <Button raised color='primary' className={classes.button} onClick={this.login.bind(this)}>Sign Up</Button>
+                <Button variant='contained' color='primary' className={classes.button} onClick={this.login.bind(this)}>Sign Up</Button>
               </div>
             </div>
           </div>

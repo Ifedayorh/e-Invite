@@ -1,1 +1,3 @@
-export { default } from './LogOut'
+import LogOut from './LogOut';
+
+export default LogOut;

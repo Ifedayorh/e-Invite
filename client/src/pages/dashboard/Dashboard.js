@@ -2,8 +2,11 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import teal from '@material-ui/core/colors/teal'
-import { withStyles } from '@material-ui/core/styles'
-import Card, { CardActions, CardContent, CardMedia } from '@material-ui/core/Card'
+import { withStyles } from '@material-ui/core'
+import Card from '@material-ui/core/Card'
+import CardMedia from '@material-ui/core/CardMedia';
+import CardContent from '@material-ui/core/CardContent';
+import CardActions from '@material-ui/core/CardActions';
 import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
 import TodoList from '../../components/TodoList'
@@ -142,7 +145,7 @@ class Dashboard extends Component {
                 title='Invitation'
               />
               <CardActions>
-                <Button dense color='primary' component={Link} to='/rsvp'>
+                <Button color='primary' component={Link} to='/rsvp'>
                   View Invitation Template
                 </Button>
               </CardActions>

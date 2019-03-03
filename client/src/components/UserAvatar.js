@@ -1,13 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { MuiThemeProvider, createMuiTheme, withStyles } from '@material-ui/core/styles'
-import List, { ListItem, ListItemText } from '@material-ui/core/List'
+import { MuiThemeProvider, createMuiTheme, withStyles } from '@material-ui/core'
+import List from '@material-ui/core/List'
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItem from '@material-ui/core/ListItem';
+
 import Avatar from '@material-ui/core/Avatar'
 // Future Reference
 // import IconButton from '@material-ui/core/IconButton'
-// import PowerSettingsNewIcon from '@@material-ui/icons/PowerSettingsNew'
-// import EmailIcon from '@@material-ui/icons/Email'
-// import AccountCircle from '@@material-ui/icons/AccountCircle'
+// import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew'
+// import EmailIcon from '@material-ui/icons/Email'
+// import AccountCircle from '@material-ui/icons/AccountCircle'
 import { Link } from 'react-router-dom'
 
 const theme = createMuiTheme({

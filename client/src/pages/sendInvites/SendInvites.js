@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { withStyles } from '@material-ui/core/styles'
+import {
+  withStyles
+} from '@material-ui/core'
 import Button from '@material-ui/core/Button'
 import Paper from '@material-ui/core/Paper'
 import TextField from '@material-ui/core/TextField'
@@ -8,15 +10,14 @@ import Alert from '../../components/Alert'
 import API from '../../utils/Api'
 import PageHeader from '../../components/PageHeader'
 import SendIcon from '@material-ui/icons/Send'
-import Dialog, {
-  DialogActions,
-  DialogContent,
-  DialogTitle
-} from '@material-ui/core/Dialog' 
-import  FormLabel   from '@material-ui/core/FormLabel'
-import  FormControl  from '@material-ui/core/FormControl'
-import  FormGroup  from '@material-ui/core/FormGroup'
-import  FormControlLabel  from '@material-ui/core/FormControlLabel'
+import Dialog from '@material-ui/core/Dialog'
+import DialogActions from '@material-ui/core/DialogActions'
+import DialogContent from '@material-ui/core/DialogContent'
+import DialogTitle from '@material-ui/core/DialogTitle'
+import FormLabel from '@material-ui/core/FormLabel'
+import FormControl from '@material-ui/core/FormControl'
+import FormGroup from '@material-ui/core/FormGroup'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
 import Checkbox from '@material-ui/core/Checkbox'
 import Slide from '@material-ui/core/Slide'
 import ImportContactsIcon from '@material-ui/icons/ImportContacts'
@@ -78,7 +79,8 @@ Please click on the link to let me know if you can make it!`,
     error: false,
     emailsSent: false,
     emailURL: process.env.REACT_APP_EMAIL_LINK,
-    guests: []
+    guests: [],
+    open:false
   }
 
   componentDidMount () {
@@ -185,12 +187,12 @@ Please click on the link to let me know if you can make it!`,
     return (
       <div className={classes.root}>
         <PageHeader title='Send Invites' body={`An email will be sent to your guest to RSVP!`} />
-        <Button raised color='primary'
+        <Button variant='contained' color='primary'
           onClick={this.importOpen}>
           <ImportContactsIcon className={classes.leftIcon} />
           Import Guests
         </Button>
-        <Dialog open={this.state.open} onRequestClose={this.importClose} transition={Transition}>
+        <Dialog open={this.state.open} onClose={this.importClose} transition={Transition}>
           <DialogTitle>Import Guests</DialogTitle>
           <DialogContent>
             <div>
@@ -261,7 +263,7 @@ Please click on the link to let me know if you can make it!`,
               onChange={this.handleChange('message')}
               />
             <div className={classes.button}>
-              <Button raised color='primary' onClick={this.onSend} >
+              <Button variant='contained' color='primary' onClick={this.onSend} >
                 <SendIcon className={classes.leftIcon} />
                 Send
               </Button>
@@ -269,12 +271,12 @@ Please click on the link to let me know if you can make it!`,
           </form>
           <Alert
             open={this.state.error}
-            onRequestClose={this.handleRequestClose}
+            onClose={this.handleRequestClose}
             message='Error: Make sure all you entered all emails correctly'
         />
           <Alert
             open={this.state.emailsSent}
-            onRequestClose={this.handleRequestClose}
+            onClose={this.handleRequestClose}
             message='Invite(s) were sent!'
         />
         </Paper>

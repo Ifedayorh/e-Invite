@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { withStyles } from '@material-ui/core/styles'
+import { withStyles } from '@material-ui/core'
 import Button from '@material-ui/core/Button'
 import classNames from 'classnames'
 import orange from '@material-ui/core/colors/orange'
@@ -17,7 +17,12 @@ const styles = theme => ({
 function RaisedButton (props) {
   const { classes } = props
   return (
-    <Button className={classNames(classes.button, classes.raisedAccent)} raised color='accent' onClick={props.onClick}>{props.children}</Button>
+    <Button 
+      className={classNames(classes.button, classes.raisedAccent)} 
+      variant='contained'
+      color='primary' 
+      onClick={props.onClick}>{props.children}
+    </Button>
   )
 }
 
