@@ -68,7 +68,7 @@ const SideBarView = ({ auth, onToggleSidebar, mobile, classes }) => (
       <div className={classes.root}>
         <Hidden lgUp>
           <Drawer
-            type='temporary'
+            variant='temporary'
             anchor='left'
             open={mobile.mobileOpen}
             classes={{
@@ -96,9 +96,9 @@ const SideBarView = ({ auth, onToggleSidebar, mobile, classes }) => (
             </div>
           </Drawer>
         </Hidden>
-        <Hidden lgDown implementation='css'>
+        <Hidden smDown implementation='css'>
           <Drawer
-            type='permanent'
+            variant='permanent'
             open
             classes={{
               paper: classes.drawerPaper,
