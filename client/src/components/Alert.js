@@ -18,7 +18,7 @@ function Alert (props) {
       onClose={props.onClose}
       autoHideDuration={3000}
       classes={{anchorOriginTopRight: classes.alerts}}
-      SnackbarContentProps={{
+      Snackbarcontentprops={{
         'aria-describedby': 'message-id2'
       }}
       message={<span id='message-id'>{props.message}</span>}
