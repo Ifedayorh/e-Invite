@@ -192,7 +192,7 @@ Please click on the link to let me know if you can make it!`,
           <ImportContactsIcon className={classes.leftIcon} />
           Import Guests
         </Button>
-        <Dialog open={this.state.open} onClose={this.importClose} transition={Transition}>
+        <Dialog open={this.state.open} onClose={this.importClose} TransitionComponent={Transition}>
           <DialogTitle>Import Guests</DialogTitle>
           <DialogContent>
             <div>
@@ -246,6 +246,7 @@ Please click on the link to let me know if you can make it!`,
               id='subject'
               label='Subject'
               value={this.state.subject}
+              name='subject'
               className={classes.textField}
               margin='normal'
               fullWidth
@@ -258,6 +259,7 @@ Please click on the link to let me know if you can make it!`,
               rows='10'
               fullWidth
               value={this.state.message}
+              name='message'
               className={classes.textField}
               margin='normal'
               onChange={this.handleChange('message')}
