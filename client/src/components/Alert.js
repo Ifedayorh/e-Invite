@@ -13,12 +13,15 @@ function Alert (props) {
   const { classes } = props
   return (
     <Snackbar
-      anchorOriginTopRight
+      anchorOrigin={{
+        vertical: 'top',
+        horizontal: 'right',
+      }}
       open={props.open}
       onClose={props.onClose}
       autoHideDuration={3000}
       classes={{anchorOriginTopRight: classes.alerts}}
-      Snackbarcontentprops={{
+      snackbarcontentprops={{
         'aria-describedby': 'message-id2'
       }}
       message={<span id='message-id'>{props.message}</span>}

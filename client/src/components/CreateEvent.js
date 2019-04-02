@@ -183,7 +183,7 @@ class addEvent extends React.Component {
           <PagesIcon className={classes.leftIcon} />
           New Event
         </Button>
-        <Dialog open={this.state.open} onClose={this.handleRequestClose} transition={Transition}>
+        <Dialog open={this.state.open} onClose={this.handleRequestClose} TransitionComponent={Transition}>
           <DialogTitle>New Event</DialogTitle>
           <DialogContent>
             <DialogContentText className={classes.spaceBottom}>

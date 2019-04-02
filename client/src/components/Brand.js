@@ -40,8 +40,8 @@ function Brand (props) {
     <MuiThemeProvider theme={theme}>
       <Toolbar disableGutters>
         <ButtonBase className={classes.logo} disableRipple component={Link} to='/'>
-          <img className={classes.imageSpace} src='/static/images/evitehub-icon.png' alt='EviteHub' width='50' />
-          <Typography type='title'>EviteHub</Typography>
+          <img className={classes.imageSpace} src='/static/images/evitehub-icon.png' alt='Naija-vite' width='50' />
+          <Typography type='title'>Naija-vite</Typography>
         </ButtonBase>
       </Toolbar>
     </MuiThemeProvider>

@@ -255,7 +255,7 @@ class GuestList extends Component {
           </Table>
         </Paper>
 
-        <Dialog open={this.state.newDialog} onClose={this.newDialogClose} transition={Transition}>
+        <Dialog open={this.state.newDialog} onClose={this.newDialogClose} TransitionComponent={Transition}>
           <DialogTitle>New Guest</DialogTitle>
           <DialogContent>
             <DialogContentText className={classes.spaceBottom}>
